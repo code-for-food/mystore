@@ -4,6 +4,7 @@ rvm:
   - 2.2.2
 
 before_install: 
+  - "bundle install"	
   - "cd extentions/spree_simple_sales"
  
 before_script:
