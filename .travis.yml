@@ -12,4 +12,4 @@ branches:
   only:
     - master
 rvm:
-  - 2.0.2
+  - 2.2.2p95
