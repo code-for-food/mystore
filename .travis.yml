@@ -1,3 +1,4 @@
+language: ruby
 before_install: 
   - "cd extentions"
   - "gem install bundler --pre"
