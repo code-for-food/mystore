@@ -1,9 +1,10 @@
 language: ruby
 before_install: 
-  - "cd extentions/spree_simple_sales"
   - "gem install bundler --pre"
+  - "cd extentions/spree_simple_sales"
+  - "bundle install"
 before_script:
-  - "bundle exec rake test_app"
+  - "bundle exec rake -t test_app"
 script: "DISPLAY=:99.0 bundle exec rspec spec"
 notifications:
   email:
