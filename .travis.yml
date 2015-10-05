@@ -6,7 +6,7 @@ rvm:
 before_install: 
   - "bundle install"
   - "cd extentions/spree_simple_sales"
- 
+  - "export BUNDLE_GEMFILE=$PWD/Gemfile"
 before_script:
   - "bundle install"	
   - "gem install rspec"	
