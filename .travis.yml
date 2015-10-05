@@ -4,11 +4,12 @@ rvm:
   - 2.2.2
 
 before_install: 
-  - "bundle install"	
+  - "bundle install"
   - "cd extentions/spree_simple_sales"
  
 before_script:
   - "bundle install"	
+  - "gem install rspec"	
   - "bundle exec rake -t test_app"
 
 script: "DISPLAY=:99.0 bundle exec rspec spec"
