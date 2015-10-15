@@ -19,6 +19,18 @@ GIT
       spree_core (~> 3.0.0)
 
 PATH
+  remote: extentions/spree_buy_again
+  specs:
+    spree_buy_again (3.0.4)
+      spree_core (~> 3.0.4)
+
+PATH
+  remote: extentions/spree_referral
+  specs:
+    spree_referral (3.0.4)
+      spree_core (~> 3.0.4)
+
+PATH
   remote: extentions/spree_simple_sales
   specs:
     spree_simple_sales (3.0.4)
@@ -344,7 +356,9 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (= 3.0.4)
   spree_auth_devise!
+  spree_buy_again!
   spree_gateway!
+  spree_referral!
   spree_simple_sales!
   spring
   sqlite3

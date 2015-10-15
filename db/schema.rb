@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005082719) do
+ActiveRecord::Schema.define(version: 20151014084909) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -518,6 +518,17 @@ ActiveRecord::Schema.define(version: 20151005082719) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "spree_referrals", force: :cascade do |t|
+    t.string  "code"
+    t.integer "user_id"
+  end
+
+  create_table "spree_referred_records", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "referral_id"
+    t.boolean "is_expired",  default: false
+  end
+
   create_table "spree_refund_reasons", force: :cascade do |t|
     t.string   "name"
     t.boolean  "active",     default: true
@@ -674,6 +685,7 @@ ActiveRecord::Schema.define(version: 20151005082719) do
     t.string   "admin_name"
     t.integer  "tax_category_id"
     t.string   "code"
+    t.integer  "delivered_days"
   end
 
   add_index "spree_shipping_methods", ["deleted_at"], name: "index_spree_shipping_methods_on_deleted_at"
